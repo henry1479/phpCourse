@@ -1,11 +1,9 @@
 <?php
-    // print_r($_POST);
+    print_r($_POST);
     $num_1 = $_POST['num_1'];
     $num_2 = $_POST['num_2'];
-    $operation = $_POST["oper"][0];
+    $operation = $_POST['operation'];
     
-
-
     function sum ($num_1,$num_2) {
         return $num_1 + $num_2;
     }
@@ -19,6 +17,9 @@
     }
 
     function apart ($num_1,$num_2) {
+        if($num_2 == 0) {
+            return "На ноль делить нельзя";
+        }
         return $num_1 / $num_2;
     }
 
@@ -48,7 +49,7 @@ function getResult($operation,$num_1,$num_2){
 $res = getResult($operation,$num_1,$num_2);
 
     if($res) {
-        header("Location:index.php?result_1=$res&num_1=$num_1&num_2=$num_2");
+        header("Location:index.php?result=$res&num_1=$num_1&num_2=$num_2");
     }
 
 
