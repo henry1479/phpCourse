@@ -27,7 +27,7 @@ class ProductInCart extends Product{
                 <p>{$this->description}</p>
                 <input name='count' value={$this->count}>
                 <p>Price: {$this->price}</p>
-                <p>Total: {$this->sum}</p>
+
             </div>
         ";
     }

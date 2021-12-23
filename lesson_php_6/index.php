@@ -14,7 +14,8 @@
 </head>
 <body>
     <h1>Calculator</h1>
-        <?php 
+        <?php
+            include('form1.php');
             include('form2.php');
         ?>
     
